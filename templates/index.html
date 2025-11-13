@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Links</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 680px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 32px;
+    }
+
+    .people {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .person-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .person-card:hover {
+      background: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .person-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .person-name {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .person-title {
+      font-size: 14px;
+      color: #666;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Team Links</h1>
+    <div class="people">
+      {{#pages}}
+      <a href="{{slug}}/" class="person-card">
+        <img src="{{avatar}}" alt="{{name}}" class="person-avatar" />
+        <div>
+          <h2 class="person-name">{{name}}</h2>
+          <p class="person-title">{{title}}</p>
+        </div>
+      </a>
+      {{/pages}}
+    </div>
+  </div>
+</body>
+</html>

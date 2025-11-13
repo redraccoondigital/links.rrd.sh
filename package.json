@@ -1,0 +1,12 @@
+{
+  "name": "links.rrd.sh",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun build.js",
+    "dev": "bun build.js && bun --watch build.js"
+  },
+  "dependencies": {
+    "mustache": "^4.2.0"
+  }
+}

@@ -1,0 +1,48 @@
+pages:
+  - slug: dezso
+    name: Dezső
+    title: CEO @ RedRaccoonDigital
+    avatar: assets/profiles/dezso.jpeg
+    links:
+      - title: LinkedIn
+        url: https://linkedin.com/in/dezsoszabo
+        icon: assets/icons/linkedin.svg
+      - title: Web Summit 2025
+        url: https://websummit.com/attendees/lis25/1d6d0565-b736-436e-a514-068002e89550
+        icon: assets/icons/websummit.png
+      - title: Reportee
+        url: https://reportee.com/dezso
+        icon: assets/icons/reportee.png
+
+  - slug: latotty
+    name: LaTotty
+    title: CTO @ RedRaccoonDigital
+    avatar: assets/profiles/latotty.jpeg
+    links:
+      - title: LinkedIn
+        url: https://linkedin.com/in/latotty
+        icon: assets/icons/linkedin.svg
+      - title: Web Summit 2025
+        url: https://websummit.com/attendees/lis25/7e3d92d5-988e-46fa-a244-0d2e720f24cd
+        icon: assets/icons/websummit.png
+      - title: Reportee
+        url: https://reportee.com/
+        icon: assets/icons/reportee.png
+
+  - slug: balint
+    name: Bálint
+    title: CEO @ RilTech
+    avatar: assets/profiles/balint.jpeg
+    links:
+      - title: LinkedIn
+        url: https://linkedin.com/in/balintant
+        icon: assets/icons/linkedin.svg
+      - title: Web Summit 2025
+        url: https://websummit.com/attendees/lis25/08559d2e-24c1-4be3-bf38-5ad8cd1ab00d
+        icon: assets/icons/websummit.png
+      - title: Reportee
+        url: https://reportee.com/
+        icon: assets/icons/reportee.png
+      - title: RilTech
+        url: https://www.riltech.co/
+        icon: assets/icons/riltech.png
