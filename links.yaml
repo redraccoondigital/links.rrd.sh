@@ -11,7 +11,7 @@ pages:
         url: https://websummit.com/attendees/lis25/1d6d0565-b736-436e-a514-068002e89550
         icon: assets/icons/websummit.png
       - title: Reportee
-        url: https://reportee.com/dezso
+        url: https://reportee.com/en
         icon: assets/icons/reportee.png
 
   - slug: latotty
@@ -26,7 +26,7 @@ pages:
         url: https://websummit.com/attendees/lis25/7e3d92d5-988e-46fa-a244-0d2e720f24cd
         icon: assets/icons/websummit.png
       - title: Reportee
-        url: https://reportee.com/
+        url: https://reportee.com/en
         icon: assets/icons/reportee.png
 
   - slug: balint
@@ -41,8 +41,8 @@ pages:
         url: https://websummit.com/attendees/lis25/08559d2e-24c1-4be3-bf38-5ad8cd1ab00d
         icon: assets/icons/websummit.png
       - title: Reportee
-        url: https://reportee.com/
+        url: https://reportee.com/en
         icon: assets/icons/reportee.png
-      - title: RilTech
+      - title: Riltech
         url: https://www.riltech.co/
         icon: assets/icons/riltech.png
