@@ -118,7 +118,7 @@
 <body>
   <div class="container">
     <div class="profile">
-      <img src="../../{{avatar}}" alt="{{name}}" class="avatar" />
+      <img src="../../{{{avatar}}}" alt="{{name}}" class="avatar" />
       <h1 class="name">{{name}}</h1>
       <p class="job-title">{{title}}</p>
     </div>
@@ -136,7 +136,7 @@
     import * as QRCode from '../../assets/qrcode.min.js';
 
     const canvas = document.createElement('canvas');
-    QRCode.toCanvas(canvas, "{{baseUrl}}/{{slug}}", {
+    QRCode.toCanvas(canvas, "{{{baseUrl}}}/{{{slug}}}", {
       width: 256,
       errorCorrectionLevel: 'H'
     }, function (error) {

@@ -132,14 +132,14 @@
 <body>
   <div class="container">
     <div class="profile">
-      <img src="../{{avatar}}" alt="{{name}}" class="avatar" />
+      <img src="../{{{avatar}}}" alt="{{name}}" class="avatar" />
       <h1 class="name">{{name}}</h1>
       <p class="job-title">{{title}}</p>
     </div>
     <div class="links">
       {{#links}}
-      <a href="{{url}}" class="link-button" target="_blank" rel="noopener noreferrer">
-        <img src="../{{icon}}" alt="{{title}}" class="link-icon" />
+      <a href="{{{url}}}" class="link-button" target="_blank" rel="noopener noreferrer">
+        <img src="../{{{icon}}}" alt="{{title}}" class="link-icon" />
         <span>{{title}}</span>
       </a>
       {{/links}}
