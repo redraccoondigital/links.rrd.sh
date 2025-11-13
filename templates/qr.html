@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{name}} - Links</title>
+  <title>{{name}} - QR Code</title>
   <style>
     * {
       margin: 0;
@@ -28,7 +28,7 @@
     }
 
     .profile {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
     .avatar {
@@ -55,45 +55,31 @@
       font-weight: 400;
     }
 
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .link-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 16px 24px;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 12px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      font-size: 16px;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .link-button:hover {
+    .qr-container {
       background: white;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      margin-bottom: 24px;
     }
 
-    .link-icon {
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
+    #qrcode {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .qr-link {
+    #qrcode img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .back-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 12px 20px;
+      padding: 12px 24px;
       background: rgba(255, 255, 255, 0.95);
       border-radius: 12px;
       text-decoration: none;
@@ -102,19 +88,20 @@
       font-size: 14px;
       transition: all 0.2s ease;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin-top: 24px;
     }
 
-    .qr-link:hover {
+    .back-link:hover {
       background: white;
       transform: translateY(-2px);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .qr-icon {
-      width: 20px;
-      height: 20px;
-      object-fit: contain;
+    .url-text {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      margin-top: 16px;
+      margin-bottom: 24px;
+      word-break: break-all;
     }
 
     @media (max-width: 480px) {
@@ -122,9 +109,8 @@
         font-size: 24px;
       }
 
-      .link-button {
-        padding: 14px 20px;
-        font-size: 15px;
+      .qr-container {
+        padding: 24px;
       }
     }
   </style>
@@ -132,22 +118,35 @@
 <body>
   <div class="container">
     <div class="profile">
-      <img src="../{{avatar}}" alt="{{name}}" class="avatar" />
+      <img src="../../{{avatar}}" alt="{{name}}" class="avatar" />
       <h1 class="name">{{name}}</h1>
       <p class="job-title">{{title}}</p>
     </div>
-    <div class="links">
-      {{#links}}
-      <a href="{{url}}" class="link-button" target="_blank" rel="noopener noreferrer">
-        <img src="../{{icon}}" alt="{{title}}" class="link-icon" />
-        <span>{{title}}</span>
-      </a>
-      {{/links}}
+    <div class="qr-container">
+      <div id="qrcode"></div>
     </div>
-    <a href="qr/" class="qr-link">
-      <img src="../assets/icons/qrcode.svg" alt="QR Code" class="qr-icon" />
-      <span>View QR Code</span>
-    </a>
+    <p class="url-text">{{baseUrl}}/{{slug}}</p>
+    <div>
+      <a href="../" class="back-link">
+        <span>← Back to Links</span>
+      </a>
+    </div>
   </div>
+
+  <script type="module">
+    import * as QRCode from '../../assets/qrcode.min.js';
+
+    const canvas = document.createElement('canvas');
+    QRCode.toCanvas(canvas, "{{baseUrl}}/{{slug}}", {
+      width: 256,
+      errorCorrectionLevel: 'H'
+    }, function (error) {
+      if (error) {
+        console.error(error);
+        return;
+      }
+      document.getElementById('qrcode').appendChild(canvas);
+    });
+  </script>
 </body>
 </html>
