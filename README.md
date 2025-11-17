@@ -29,19 +29,12 @@ The site automatically deploys to GitHub Pages when you push to the `main` branc
 3. Add a CNAME file with your custom domain if needed
 4. Configure your DNS to point to GitHub Pages
 
-For the custom domain `links.rrd.sh`, create a [CNAME file](./CNAME) in the root with:
+For your own custom domain `example.com`, edit the [CNAME file](./CNAME) in the root with:
 ```
-links.rrd.sh
+example.com
 ```
 
 Then configure your DNS with a CNAME record:
 ```
-links.rrd.sh → your-username.github.io
+example.com → your-username.github.io
 ```
-
-## Structure
-
-- `links.yaml` - Configuration for all pages and links
-- `build.js` - Static site generator
-- `assets/` - Profile pictures and link icons
-- `dist/` - Generated static site (created on build)
