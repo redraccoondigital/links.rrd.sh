@@ -1,6 +1,6 @@
 # links.rrd.sh
 
-A simple linktree alternative for your team, built with Bun and deployed to GitHub Pages.
+Our simple tree of links 😉 for our team, built with Bun and deployed to GitHub Pages.
 
 ## Setup
 
